@@ -20,7 +20,12 @@ export default function RootLayout({
 }) {
   return (
     <html lang="es">
-      <body className={`${dmSans.variable} ${manrope.variable} ${montserrat.variable}`}>
+      <head>
+        <meta name="apple-mobile-web-app-title" content="Vergio Digital" />
+      </head>
+      <body
+        className={`${dmSans.variable} ${manrope.variable} ${montserrat.variable}`}
+      >
         {children}
       </body>
     </html>
