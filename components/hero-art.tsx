@@ -1,0 +1,20 @@
+export function HeroArt({ cabanas = false }: { cabanas?: boolean }) {
+  return (
+    <div className="hero-art" aria-hidden="true">
+      <div className="orb orb-one" />
+      <div className="orb orb-two" />
+      <div className="hero-card card-a">
+        <span>01</span>
+        <strong>{cabanas ? "Sitio propio" : "Pensar"}</strong>
+      </div>
+      <div className="hero-card card-b">
+        <span>02</span>
+        <strong>{cabanas ? "Reserva" : "Crear"}</strong>
+      </div>
+      <div className="hero-card card-c">
+        <span>03</span>
+        <strong>{cabanas ? "Más margen" : "Crecer"}</strong>
+      </div>
+    </div>
+  );
+}

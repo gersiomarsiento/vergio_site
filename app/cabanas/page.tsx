@@ -1,0 +1,393 @@
+import Link from "next/link";
+import { SiteHeader } from "@/components/site-header";
+import { SiteFooter } from "@/components/site-footer";
+import { HeroArt } from "@/components/hero-art";
+import { Ticker } from "@/components/ticker";
+import { Reveal } from "@/components/reveal";
+
+const plans = [
+  {
+    level: "01 · VITRINA",
+    name: "Vitrina",
+    tagline: "Presencia profesional.",
+    price: "US$200",
+    unit: "pago único",
+    featured: false,
+    features: [
+      "Sitio propio con dominio",
+      "Galería de fotos",
+      "Ubicación y contacto",
+      "Botón directo a WhatsApp",
+    ],
+    excluded: ["Motor de reservas", "Calendario online"],
+    blurb: "Ideal si querés que te encuentren y confíen.",
+  },
+  {
+    level: "02 · RECOMENDADO",
+    name: "Reservas Directas",
+    tagline: "Menos comisión, más margen.",
+    price: "US$350",
+    unit: "pago único",
+    featured: true,
+    features: [
+      "Todo lo de Vitrina",
+      "Solicitud de reserva",
+      "Formulario de fechas y huéspedes",
+      "Notificación directa",
+    ],
+    excluded: ["Calendario sincronizado"],
+    blurb: "La opción pensada para recuperar el costo con pocas reservas.",
+  },
+  {
+    level: "03 · COMPLETO",
+    name: "Completo",
+    tagline: "Automatizá la operación.",
+    price: "US$650*",
+    unit: "pago único",
+    featured: false,
+    features: [
+      "Todo lo anterior",
+      "Calendario online",
+      "Sincronización con Booking/Airbnb",
+      "Confirmación de reservas",
+    ],
+    excluded: [],
+    blurb: "Para delegar más y administrar menos.",
+  },
+];
+const support = [
+  [
+    "Autogestionado",
+    "US$0",
+    "Te lo entrego y lo manejás vos. Sin compromiso mío de por medio.",
+  ],
+  [
+    "Solo hosting",
+    "US$40/año",
+    "Me encargo del dominio y el hosting. El resto lo manejás vos.",
+  ],
+  [
+    "Retainer completo",
+    "US$30/mes",
+    "Monitoreo la sincronización, hago cambios menores y arreglo lo que falle.",
+  ],
+  [
+    "Por hora",
+    "US$20/h",
+    "Sin cuota fija — me llamás cuando necesitás un cambio puntual.",
+  ],
+];
+
+export default function Cabanas() {
+  return (
+    <>
+      <SiteHeader />
+      <main id="top">
+        <section className="hero section-shell">
+          <Reveal className="hero-copy">
+            <p className="eyebrow">RESERVAS DIRECTAS · SIN COMISIÓN</p>
+            <h1 className="xl:text-[60px]! text-[40px]!">
+              Cada reserva por Booking le deja el{" "}
+              <span className="bg-purple text-white!">20%</span> a otro.
+            </h1>
+            <p className="hero-text">
+              Con un sitio propio, esa plata se queda en tu bolsillo. Pagás una
+              sola vez, no una cuota mensual — y seguís publicando en Booking y
+              Airbnb si querés. Esto es una puerta más para tus huéspedes, no un
+              reemplazo.
+            </p>
+            <p
+              className="hero-text"
+              style={{ fontSize: "14px", lineHeight: 1.6, marginTop: "-14px" }}
+            >
+              Armado a medida para cabañas de Punta del Diablo — el mismo tipo
+              de sitio, tu propio contenido.
+            </p>
+            <div className="hero-actions">
+              <Link className="button" href="#precios">
+                Ver opciones <span>↓</span>
+              </Link>
+              <Link className="text-link" href="#contacto">
+                Hablemos <span>↗</span>
+              </Link>
+            </div>
+          </Reveal>
+          <HeroArt cabanas />
+        </section>
+        <Ticker cabanas />
+        <Reveal className="section-shell">
+          <section className="split-section">
+            <div>
+              <p className="eyebrow">LA CUENTA QUE IMPORTA</p>
+              <h2>Lo que se pierde por reserva, y lo que se paga una vez.</h2>
+            </div>
+            <div className="intro-copy">
+              <p>
+                Números ilustrativos para ver la lógica: tu tarifa y tu volumen
+                de reservas son los que definen cuánto te ahorrás realmente.
+              </p>
+              <div className="stats">
+                <div>
+                  <strong>20%</strong>
+                  <span>comisión de referencia</span>
+                </div>
+                <div>
+                  <strong>US$350</strong>
+                  <span>pago único ilustrativo</span>
+                </div>
+                <div>
+                  <strong>3–4</strong>
+                  <span>reservas para cubrirlo</span>
+                </div>
+              </div>
+            </div>
+          </section>
+        </Reveal>
+        <section className="services">
+          <div className="section-shell">
+            <Reveal>
+              <div className="section-heading">
+                <div>
+                  <p className="eyebrow">LA LÓGICA</p>
+                  <h2>
+                    Una reserva que deja de pagar comisión cambia la cuenta.
+                  </h2>
+                </div>
+              </div>
+            </Reveal>
+            <div className="project-grid">
+              <Reveal>
+                <article className="project">
+                  <div
+                    className="project-visual visual-one"
+                    style={{ minHeight: "360px" }}
+                  >
+                    <div className="mock-browser">
+                      <span />
+                      <span />
+                      <span />
+                    </div>
+                    <div className="mock-panel panel-purple" />
+                    <div className="mock-panel panel-mint" />
+                  </div>
+                  <div className="project-meta">
+                    <div>
+                      <h3>Vía Booking / Airbnb</h3>
+                      <p>
+                        Por ejemplo, en una reserva de US$500 la semana con ~20%
+                        de comisión.
+                      </p>
+                    </div>
+                    <span className="arrow">−US$100</span>
+                  </div>
+                </article>
+              </Reveal>
+              <Reveal>
+                <article className="project">
+                  <div
+                    className="project-visual visual-three"
+                    style={{ minHeight: "360px" }}
+                  >
+                    <div className="wordmark">
+                      TU
+                      <br />
+                      SITIO.
+                    </div>
+                  </div>
+                  <div className="project-meta">
+                    <div>
+                      <h3>Vía tu propio sitio</h3>
+                      <p>
+                        Pago único por “Reservas Directas”. Se cubre solo con 3
+                        o 4 reservas directas.
+                      </p>
+                    </div>
+                    <span className="arrow">US$350</span>
+                  </div>
+                </article>
+              </Reveal>
+            </div>
+          </div>
+        </section>
+        <Reveal className="section-shell">
+          <section className="split-section">
+            <div>
+              <p className="eyebrow">POR QUÉ PAGO ÚNICO</p>
+              <h2>No otra suscripción más.</h2>
+            </div>
+            <div className="intro-copy">
+              <p>
+                Ya pagás comisión a Booking, tal vez a Airbnb, quizás a otro
+                canal. Lo último que necesitás es una cuota mensual más por
+                tener un sitio propio.
+              </p>
+              <p>
+                <strong>La idea es simple:</strong> pagás una vez, el sitio
+                queda tuyo, y de ahí en más lo que entra por reserva directa es
+                todo tuyo. Si más adelante querés que yo me encargue del
+                mantenimiento, eso es un servicio aparte — nunca una condición
+                para tener el sitio.
+              </p>
+              <p>
+                Es, literalmente, tu ventana de confianza: el lugar donde un
+                huésped que ya confía en vos puede reservar directo, sin
+                depender de una plataforma que ninguno de los dos eligió.
+              </p>
+            </div>
+          </section>
+        </Reveal>
+        <section id="precios" className="services">
+          <div className="section-shell">
+            <Reveal>
+              <p className="eyebrow">OPCIONES</p>
+              <h2>Tres niveles, según cuánto necesite tu cabaña.</h2>
+              <p className="hero-text" style={{ fontSize: "18px" }}>
+                Elegí el que resuelve tu problema hoy. Se puede empezar simple y
+                sumar más adelante.
+              </p>
+            </Reveal>
+            <div className="mt-12 grid gap-6 sm:grid-cols-1 lg:grid-cols-3">
+              {plans.map((p) => (
+                <Reveal key={p.name}>
+                  <article
+                    className={`flex h-full flex-col rounded-site border p-7 ${
+                      p.featured
+                        ? "-translate-y-2.5 bg-purple text-white border-purple"
+                        : "bg-white text-ink border-line"
+                    }`}
+                  >
+                    <div
+                      className={`mb-2.5 text-xs font-extrabold uppercase tracking-[.12em] ${p.featured ? "text-mint" : "text-muted"}`}
+                    >
+                      {p.level}
+                    </div>
+                    <h3 className="mb-1 text-3xl">{p.name}</h3>
+                    <p
+                      className={`mb-6 ${p.featured ? "text-white/70" : "text-muted"}`}
+                    >
+                      {p.tagline}
+                    </p>
+                    <ul className="flex-1 list-none space-y-2 p-0">
+                      {p.features.map((f) => (
+                        <li
+                          key={f}
+                          className={`flex gap-2.5 leading-snug ${p.featured ? "text-white/80" : "text-muted"}`}
+                        >
+                          <span
+                            className={`font-extrabold ${p.featured ? "text-mint" : "text-purple"}`}
+                          >
+                            ✓
+                          </span>{" "}
+                          {f}
+                        </li>
+                      ))}
+                      {p.excluded.map((f) => (
+                        <li
+                          key={f}
+                          className="flex gap-2.5 leading-snug text-muted opacity-55"
+                        >
+                          <span>–</span> {f}
+                        </li>
+                      ))}
+                    </ul>
+                    <p
+                      className={`mt-6 text-sm italic ${p.featured ? "text-white/65" : "text-muted"}`}
+                    >
+                      {p.blurb}
+                    </p>
+                    <div
+                      className={`mt-6 flex items-end justify-between gap-4 border-t pt-5 ${p.featured ? "border-white/20" : "border-line"}`}
+                    >
+                      <strong
+                        className={`font-display text-3xl font-extrabold ${p.featured ? "text-mint" : "text-purple"}`}
+                      >
+                        {p.price}
+                      </strong>
+                      <span
+                        className={`max-w-[110px] text-right text-xs font-bold uppercase tracking-[.04em] ${p.featured ? "text-white/70" : "text-muted"}`}
+                      >
+                        {p.unit}
+                      </span>
+                    </div>
+                  </article>
+                </Reveal>
+              ))}
+            </div>
+            <p
+              style={{
+                marginTop: "18px",
+                fontSize: "14px",
+                color: "var(--muted)",
+              }}
+            >
+              * Precio de referencia para Completo — se termina de ajustar según
+              el alcance real del proyecto piloto.
+            </p>
+          </div>
+        </section>
+        <Reveal className="section-shell">
+          <section className="split-section flex! flex-col">
+            <div>
+              <p className="eyebrow">DESPUÉS DEL LANZAMIENTO</p>
+              <h2>¿Quién se encarga del sitio de ahí en más?</h2>
+            </div>
+            <div className="intro-copy">
+              <p>
+                Se combina con cualquiera de los tres niveles de arriba — vos
+                elegís cuánto querés delegar.
+              </p>
+              <div className="mt-10 grid gap-4 sm:grid-cols-1 lg:grid-cols-4">
+                {support.map((s) => (
+                  <article
+                    key={s[0]}
+                    className="rounded-[20px] border border-line bg-white p-6"
+                  >
+                    <div className="text-[11px] font-extrabold uppercase tracking-[.12em] text-purple">
+                      Opción
+                    </div>
+                    <h3 className="my-2.5 text-[19px] tracking-[-.02em]">
+                      {s[0]}
+                    </h3>
+                    <div className="font-display mb-2.5 text-2xl font-extrabold text-purple">
+                      {s[1]}
+                    </div>
+                    <p className="m-0 text-sm leading-snug text-muted">
+                      {s[2]}
+                    </p>
+                  </article>
+                ))}
+              </div>
+            </div>
+          </section>
+        </Reveal>
+        <section id="contacto" className="contact">
+          <Reveal className="section-shell contact-inner">
+            <p className="eyebrow">HABLEMOS</p>
+            <h2>
+              ¿Qué opción tiene sentido
+              <br />
+              <span>para tu cabaña?</span>
+            </h2>
+            <p className="hero-text" style={{ color: "rgba(255,255,255,.7)" }}>
+              Sin compromiso — vemos juntos qué nivel resuelve lo que necesitás
+              hoy, y qué tan seguido querés que yo esté encima del sitio.
+            </p>
+            <a className="button button-mint" href="#">
+              Escribime por WhatsApp →
+            </a>
+            <p
+              style={{
+                fontSize: "12px",
+                color: "rgba(255,255,255,.45)",
+                marginTop: "16px",
+              }}
+            >
+              [reemplazar por tu número / enlace de WhatsApp antes de enviar]
+            </p>
+          </Reveal>
+        </section>
+      </main>
+      <SiteFooter />
+    </>
+  );
+}
