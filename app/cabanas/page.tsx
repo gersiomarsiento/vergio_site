@@ -8,58 +8,78 @@ import { Reveal } from "@/components/reveal";
 const plans = [
   {
     level: "01 · VITRINA",
-    name: "Vitrina",
+    name: "Simple",
     tagline: "Presencia profesional.",
-    price: "US$200",
+    price: "US$250",
     unit: "pago único",
     featured: false,
     features: [
-      "Sitio propio con dominio",
+      "Sitio propio con dominio y mail",
+      "Logo y colores adaptados",
+      "Diseño optimizado para celulares",
+      "Calendario sincronizado",
       "Galería de fotos",
-      "Ubicación y contacto",
+      "Sección Instagram/Reseñas",
+      "Mapa, ubicación, redes y contacto",
+      "Trilingüe/Multimoneda",
       "Botón directo a WhatsApp",
     ],
-    excluded: ["Motor de reservas", "Calendario online"],
-    blurb: "Ideal si querés que te encuentren y confíen.",
+    excluded: ["Motor de reservas", "SEO optimizado", "Panel de administrador"],
+    blurb: "Ideal para generar confianza en el cliente.",
   },
   {
     level: "02 · RECOMENDADO",
-    name: "Reservas Directas",
-    tagline: "Menos comisión, más margen.",
-    price: "US$350",
+    name: "Completo",
+    tagline: "Automatizá la operacion de reservas.",
+    price: "US$450",
     unit: "pago único",
     featured: true,
     features: [
-      "Todo lo de Vitrina",
-      "Solicitud de reserva",
-      "Formulario de fechas y huéspedes",
-      "Notificación directa",
+      "Sitio propio con dominio y mail",
+      "Logo y colores adaptados",
+      "Diseño optimizado para celulares",
+      "Calendario sincronizado",
+      "Galería de fotos",
+      "Sección Instagram/Reseñas",
+      "Mapa, ubicación, redes y contacto",
+      "Trilingüe/Multimoneda",
+      "Botón directo a WhatsApp",
+      "Motor de reservas",
+      "SEO optimizado"
     ],
-    excluded: ["Calendario sincronizado"],
-    blurb: "La opción pensada para recuperar el costo con pocas reservas.",
+    excluded: ["Panel de administrador"],
+    blurb: "La comodidad de que tus clientes puedan reservar por sí mismos.",
   },
   {
     level: "03 · COMPLETO",
-    name: "Completo",
-    tagline: "Automatizá la operación.",
-    price: "US$650*",
+    name: "Full Admin",
+    tagline: "Control total del contenido.",
+    price: "US$650",
     unit: "pago único",
     featured: false,
     features: [
-      "Todo lo anterior",
-      "Calendario online",
-      "Sincronización con Booking/Airbnb",
-      "Confirmación de reservas",
+      "Sitio propio con dominio y mail",
+      "Logo y colores adaptados",
+      "Diseño optimizado para celulares",
+      "Calendario sincronizado",
+      "Galería de fotos",
+      "Sección Instagram/Reseñas",
+      "Mapa, ubicación, redes y contacto",
+      "Trilingüe/Multimoneda",
+      "Botón directo a WhatsApp",
+      "Motor de reservas",
+      "SEO optimizado",
+      "Panel de administrador"
     ],
     excluded: [],
-    blurb: "Para delegar más y administrar menos.",
+    blurb: "La capacidad de modiicar el contenido a tu gusto por tu cuenta y cuando quieras.",
   },
 ];
 const support = [
   [
     "Autogestionado",
     "US$0",
-    "Te lo entrego y lo manejás vos. Sin compromiso mío de por medio.",
+    "Te lo entrego y lo manejás vos. Sin compromiso de por medio. Hosting también por cuenta tuya",
   ],
   [
     "Solo hosting",
@@ -69,7 +89,7 @@ const support = [
   [
     "Retainer completo",
     "US$30/mes",
-    "Monitoreo la sincronización, hago cambios menores y arreglo lo que falle.",
+    "Monitoreo la sincronización, hago cambios menores y arreglo lo que falle. Máximo 3 horas mensuales.",
   ],
   [
     "Por hora",
@@ -320,8 +340,6 @@ export default function Cabanas() {
                 color: "var(--muted)",
               }}
             >
-              * Precio de referencia para Completo — se termina de ajustar según
-              el alcance real del proyecto piloto.
             </p>
           </div>
         </section>
@@ -372,18 +390,9 @@ export default function Cabanas() {
               Sin compromiso — vemos juntos qué nivel resuelve lo que necesitás
               hoy, y qué tan seguido querés que yo esté encima del sitio.
             </p>
-            <a className="button button-mint" href="#">
+            <a className="button button-mint" href="https://wa.me/+59898899654?text=¡Hola! Me interesa saber más sobre el servicio de sitios web para cabañas.">
               Escribime por WhatsApp →
             </a>
-            <p
-              style={{
-                fontSize: "12px",
-                color: "rgba(255,255,255,.45)",
-                marginTop: "16px",
-              }}
-            >
-              [reemplazar por tu número / enlace de WhatsApp antes de enviar]
-            </p>
           </Reveal>
         </section>
       </main>
