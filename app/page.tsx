@@ -103,24 +103,27 @@ export default function Home() {
           <div className="project-grid">
             <Reveal>
               <ProjectCard
-                title="Northstar"
+                title="Geo Cabañas"
                 meta="Plataforma de marca · Diseño de producto · Desarrollo"
                 large
-                kind="browser"
+                kind="image"
+                src="/images/geo_hero.png"
               />
             </Reveal>
             <Reveal>
               <ProjectCard
-                title="Field Notes"
-                meta="UX/UI · Producto digital"
-                kind="phone"
+                title="Wakana"
+                meta="UX/UI · E-Commerce"
+                kind="image"
+                src="/images/wakana.png"
               />
             </Reveal>
             <Reveal>
               <ProjectCard
-                title="Momentum"
-                meta="Estrategia · Campaña · Web"
-                kind="wordmark"
+                title="Guía Amarilla PDD"
+                meta="PWA App · Servicios · Web"
+                kind="image"
+                src="/images/guia-pdd.png"
               />
             </Reveal>
           </div>
@@ -170,9 +173,9 @@ export default function Home() {
             </h2>
             <a
               className="button button-mint"
-              href="mailto:hello@yourcompany.com"
+              href="https://wa.me/+59898899654?text=¡Hola! Me interesa saber más sobre los servicios que ofrecen."
             >
-              hello@yourcompany.com <span>↗</span>
+              Escribinos por WhatsApp →
             </a>
           </Reveal>
         </section>

@@ -1,13 +1,15 @@
 export function ProjectCard({
   title,
   meta,
+  src,
   large = false,
   kind,
 }: {
   title: string;
   meta: string;
+  src?: string;
   large?: boolean;
-  kind: "browser" | "phone" | "wordmark";
+  kind: "browser" | "phone" | "wordmark" | "image";
 }) {
   return (
     <article className={`project ${large ? "project-large" : ""}`}>
@@ -35,6 +37,9 @@ export function ProjectCard({
             <br />
             FAST.
           </div>
+        )}
+        {kind === "image" && (
+          <img src={src} className="min-h-105 object-cover"/>
         )}
       </div>
       <div className="project-meta">

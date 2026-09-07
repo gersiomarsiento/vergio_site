@@ -4,6 +4,7 @@ import { SiteFooter } from "@/components/site-footer";
 import { HeroArt } from "@/components/hero-art";
 import { Ticker } from "@/components/ticker";
 import { Reveal } from "@/components/reveal";
+import Image from "next/image";
 
 const plans = [
   {
@@ -45,7 +46,7 @@ const plans = [
       "Trilingüe/Multimoneda",
       "Botón directo a WhatsApp",
       "Motor de reservas",
-      "SEO optimizado"
+      "SEO optimizado",
     ],
     excluded: ["Panel de administrador"],
     blurb: "La comodidad de que tus clientes puedan reservar por sí mismos.",
@@ -69,32 +70,33 @@ const plans = [
       "Botón directo a WhatsApp",
       "Motor de reservas",
       "SEO optimizado",
-      "Panel de administrador"
+      "Panel de administrador",
     ],
     excluded: [],
-    blurb: "La capacidad de modiicar el contenido a tu gusto por tu cuenta y cuando quieras.",
+    blurb:
+      "La capacidad de modiicar el contenido a tu gusto por tu cuenta y cuando quieras.",
   },
 ];
 const support = [
   [
     "Autogestionado",
     "US$0",
-    "Te lo entrego y lo manejás vos. Sin compromiso de por medio. Hosting también por cuenta tuya",
+    "Te lo entregamos y lo manejás vos. Sin compromiso de por medio. Hosting también por cuenta tuya",
   ],
   [
     "Solo hosting",
     "US$40/año",
-    "Me encargo del dominio y el hosting. El resto lo manejás vos.",
+    "Nos encargamos del dominio y el hosting. El resto lo manejás vos.",
   ],
   [
     "Retainer completo",
     "US$30/mes",
-    "Monitoreo la sincronización, hago cambios menores y arreglo lo que falle. Máximo 3 horas mensuales.",
+    "Monitoreamos la sincronización, hacemos cambios menores y arreglamos lo que falle. Máximo 3 horas mensuales.",
   ],
   [
     "Por hora",
     "US$20/h",
-    "Sin cuota fija — me llamás cuando necesitás un cambio puntual.",
+    "Sin cuota fija — nos llamás cuando necesitás un cambio puntual.",
   ],
 ];
 
@@ -152,11 +154,11 @@ export default function Cabanas() {
                   <span>comisión de referencia</span>
                 </div>
                 <div>
-                  <strong>US$350</strong>
+                  <strong>US$450</strong>
                   <span>pago único ilustrativo</span>
                 </div>
                 <div>
-                  <strong>3–4</strong>
+                  <strong>4-5</strong>
                   <span>reservas para cubrirlo</span>
                 </div>
               </div>
@@ -178,7 +180,7 @@ export default function Cabanas() {
             <div className="project-grid">
               <Reveal>
                 <article className="project">
-                  <div
+                  {/* <div
                     className="project-visual visual-one"
                     style={{ minHeight: "360px" }}
                   >
@@ -189,7 +191,8 @@ export default function Cabanas() {
                     </div>
                     <div className="mock-panel panel-purple" />
                     <div className="mock-panel panel-mint" />
-                  </div>
+                  </div> */}
+                  <img src="/images/booking-airbnb-20.jpg" alt="geo-hero" className="project-visual visual-one object-cover min-h-50! aspect-[5/3]" />
                   <div className="project-meta">
                     <div>
                       <h3>Vía Booking / Airbnb</h3>
@@ -204,7 +207,7 @@ export default function Cabanas() {
               </Reveal>
               <Reveal>
                 <article className="project">
-                  <div
+                  {/* <div
                     className="project-visual visual-three"
                     style={{ minHeight: "360px" }}
                   >
@@ -213,16 +216,16 @@ export default function Cabanas() {
                       <br />
                       SITIO.
                     </div>
-                  </div>
+                  </div> */}
+                  <img src="/images/geo_hero.png" alt="geo-hero" className="project-visual visual-one object-cover min-h-50! aspect-[5/3]" />
                   <div className="project-meta">
                     <div>
                       <h3>Vía tu propio sitio</h3>
                       <p>
-                        Pago único por “Reservas Directas”. Se cubre solo con 3
-                        o 4 reservas directas.
+                        Pago único por el plan completo. Lo recuperás en un mes, lo demás es ganancia pura.
                       </p>
                     </div>
-                    <span className="arrow">US$350</span>
+                    <span className="arrow">US$450</span>
                   </div>
                 </article>
               </Reveal>
@@ -233,7 +236,7 @@ export default function Cabanas() {
           <section className="split-section">
             <div>
               <p className="eyebrow">POR QUÉ PAGO ÚNICO</p>
-              <h2>No otra suscripción más.</h2>
+              <h2>Evitás otra suscripción más.</h2>
             </div>
             <div className="intro-copy">
               <p>
@@ -243,10 +246,10 @@ export default function Cabanas() {
               </p>
               <p>
                 <strong>La idea es simple:</strong> pagás una vez, el sitio
-                queda tuyo, y de ahí en más lo que entra por reserva directa es
-                todo tuyo. Si más adelante querés que yo me encargue del
-                mantenimiento, eso es un servicio aparte — nunca una condición
-                para tener el sitio.
+                queda en tus manos, y de ahí en más lo que entra por reserva
+                directa es todo tuyo. Si más adelante querés que nos encarguemos
+                del mantenimiento, eso es un servicio aparte — nunca una
+                condición para tener el sitio.
               </p>
               <p>
                 Es, literalmente, tu ventana de confianza: el lugar donde un
@@ -339,8 +342,7 @@ export default function Cabanas() {
                 fontSize: "14px",
                 color: "var(--muted)",
               }}
-            >
-            </p>
+            ></p>
           </div>
         </section>
         <Reveal className="section-shell">
@@ -388,10 +390,13 @@ export default function Cabanas() {
             </h2>
             <p className="hero-text" style={{ color: "rgba(255,255,255,.7)" }}>
               Sin compromiso — vemos juntos qué nivel resuelve lo que necesitás
-              hoy, y qué tan seguido querés que yo esté encima del sitio.
+              hoy, y qué tan seguido querés que estemos encima del sitio.
             </p>
-            <a className="button button-mint" href="https://wa.me/+59898899654?text=¡Hola! Me interesa saber más sobre el servicio de sitios web para cabañas.">
-              Escribime por WhatsApp →
+            <a
+              className="button button-mint"
+              href="https://wa.me/+59898899654?text=¡Hola! Me interesa saber más sobre el servicio de sitios web para cabañas."
+            >
+              Escribinos por WhatsApp →
             </a>
           </Reveal>
         </section>

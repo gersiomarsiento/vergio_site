@@ -1,5 +1,6 @@
 import Link from "next/link";
 import Image from "next/image";
+import InstagramIcon from "./icons/InstagramIcon";
 
 export function SiteFooter() {
   return (
@@ -17,8 +18,10 @@ export function SiteFooter() {
       </Link>
       <p>© 2026 VERGIO DIGITAL. Todos los derechos reservados.</p>
       <div className="footer-links">
-        <Link href="#">LinkedIn</Link>
-        <Link href="#">Instagram</Link>
+        {/* <Link href="#">LinkedIn</Link> */}
+        <Link href="https://www.instagram.com/vergio.digital/" target="blank">
+          <InstagramIcon className="w-8 h-8"/>
+        </Link>
       </div>
     </footer>
   );
