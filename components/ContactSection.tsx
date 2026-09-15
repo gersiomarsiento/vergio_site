@@ -1,34 +1,19 @@
 import { Reveal } from "@/components/reveal";
+import Link from "next/link";
 
 export default function ContactSection() {
   return (
     <Reveal className="section-shell">
-      <section id="about" className="split-section">
-        <div>
-          <p className="eyebrow">QUÉ HACEMOS</p>
-          <h2>Hacemos que lo digital se sienta menos complicado.</h2>
-        </div>
-        <div className="intro-copy">
-          <p>
-            Desde la primera idea hasta el lanzamiento y la iteración, reunimos
-            estrategia, diseño y tecnología en un proceso enfocado. El
-            resultado: decisiones más claras, mejores experiencias y trabajo más
-            fácil de mantener.
-          </p>
-          <div className="stats">
-            <div>
-              <strong>40+</strong>
-              <span>proyectos entregados</span>
-            </div>
-            <div>
-              <strong>8 años</strong>
-              <span>construyendo juntos</span>
-            </div>
-            <div>
-              <strong>12</strong>
-              <span>especialistas</span>
-            </div>
-          </div>
+      <section id="about" className="p-30 special-gradient">
+        <div className="">
+          <div className="eyebrow text-mint">¿TENÉS UN PROYECTO EN MENTE?</div>
+          <h2 className="font-bebas text-[80px]! desktop:text-[130px]! leading-[84%]! text-white">
+            CREEMOS ALGO <br />
+            <span className="text-mint">QUE VALGA LA PENA</span>
+          </h2>
+          <Link className={`button button-mint mt-10`} href="">
+            Escribinos por WhatsApp <span>→</span>
+          </Link>
         </div>
       </section>
     </Reveal>

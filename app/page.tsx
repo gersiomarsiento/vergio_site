@@ -4,6 +4,7 @@ import { SiteFooter } from "@/components/site-footer";
 import { Ticker } from "@/components/ticker";
 import HeroSlider from "@/components/HeroSlider";
 import PortfolioSection from "@/components/PortfolioSection";
+import ContactSection from "@/components/ContactSection";
 
 
 
@@ -15,6 +16,7 @@ export default function Home() {
         <HeroSlider />
         <Ticker />
         <PortfolioSection />
+        <ContactSection />
       </main>
       <SiteFooter />
     </>

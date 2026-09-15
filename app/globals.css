@@ -565,6 +565,21 @@ blockquote {
   transform: translateY(0);
 }
 
+.special-gradient {
+  background:
+    radial-gradient(
+      circle at -10% -10%,
+      #286243,
+      transparent 42%
+    ),
+    radial-gradient(
+      circle at 110% 110%,
+      #286243,
+      transparent 42%
+    ),
+    #2A004D;
+}
+
 @media (max-width: 900px) {
   .site-header {
     grid-template-columns: 1fr auto;
