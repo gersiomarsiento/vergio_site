@@ -1,9 +1,9 @@
 import Link from "next/link";
 import { SiteHeader } from "@/components/site-header";
 import { SiteFooter } from "@/components/site-footer";
-import { HeroArt } from "@/components/hero-art";
 import { Ticker } from "@/components/ticker";
 import { ProjectCard } from "@/components/project-card";
+import HeroSlider from "@/components/HeroSlider";
 import { Reveal } from "@/components/reveal";
 
 const services = [
@@ -29,30 +29,7 @@ export default function Home() {
     <>
       <SiteHeader />
       <main id="top">
-        <section className="hero section-shell">
-          <Reveal className="hero-copy">
-            <p className="eyebrow">ESTRATEGIA · DISEÑO · DIGITAL</p>
-            <h1>
-              Ideas claras.
-              <br />
-              <span>Mejores resultados.</span>
-            </h1>
-            <p className="hero-text">
-              Ayudamos a empresas ambiciosas a convertir desafíos complejos en
-              experiencias digitales simples, útiles y que hacen avanzar el
-              negocio.
-            </p>
-            <div className="hero-actions">
-              <Link className="button" href="#contact">
-                Empezar un proyecto <span>↗</span>
-              </Link>
-              <Link className="text-link" href="#work">
-                Ver nuestro trabajo <span>↓</span>
-              </Link>
-            </div>
-          </Reveal>
-          <HeroArt />
-        </section>
+        <HeroSlider />
         <Ticker />
         <Reveal className="section-shell">
           <section id="about" className="split-section">
