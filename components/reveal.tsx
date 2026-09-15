@@ -27,7 +27,7 @@ export function Reveal({
     return () => observer.disconnect();
   }, []);
   return (
-    <div ref={ref} className={`reveal ${className}`}>
+    <div ref={ref} className={`reveal contents ${className}`}>
       {children}
     </div>
   );

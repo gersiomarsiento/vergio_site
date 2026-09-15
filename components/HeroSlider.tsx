@@ -100,14 +100,14 @@ export default function Hero() {
                   className={`hero flex ${slide.style == "default" ? "flex-row" : "flex-row-reverse"} max-w-360 justify-self-center`}
                 >
                   <div className="hero-copy">
-                    <p className="eyebrow">{slide.eyebrow}</p>
+                    <p className={`eyebrow ${slide.style == "default" ? "text-purple" : "text-mint-400!"}`}>{slide.eyebrow}</p>
                     <h1 className="uppercase font-bebas text-[80px] desktop:text-[130px] leading-[84%]">
                       {slide.title}
                     </h1>
-                    <p className="hero-text">{slide.text}</p>
+                    <p className="hero-text max-w-150 text-gray">{slide.text}</p>
                     <div className="hero-actions">
                       <Link
-                        className={`button ${slide.style == "default" ? "button-small" : "button-mint"}`}
+                        className={`button ${slide.style == "default" ? "button-large" : "button-mint"}`}
                         href={slide.primaryCta.href}
                       >
                         {slide.primaryCta.label} <span>↗</span>

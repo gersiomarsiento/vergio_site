@@ -4,7 +4,6 @@ import { SiteFooter } from "@/components/site-footer";
 import { HeroArt } from "@/components/hero-art";
 import { Ticker } from "@/components/ticker";
 import { Reveal } from "@/components/reveal";
-import Image from "next/image";
 
 const plans = [
   {
@@ -105,7 +104,7 @@ export default function Cabanas() {
     <>
       <SiteHeader />
       <main id="top">
-        <section className="hero section-shell">
+        <section className="hero section-shell flex">
           <Reveal className="hero-copy">
             <p className="eyebrow">RESERVAS DIRECTAS · SIN COMISIÓN</p>
             <h1 className="xl:text-[60px]! text-[40px]!">
@@ -168,7 +167,7 @@ export default function Cabanas() {
         <section className="services">
           <div className="section-shell">
             <Reveal>
-              <div className="section-heading">
+              <div className="">
                 <div>
                   <p className="eyebrow">LA LÓGICA</p>
                   <h2>

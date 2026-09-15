@@ -3,8 +3,8 @@ import Image from "next/image";
 
 export function SiteHeader() {
   return (
-    <header className="px-30">
-      <div className="site-header max-w-360">
+    <header className="">
+      <div className="site-header max-w-360 px-30">
         <Link className="brand" href="/#top" aria-label="Inicio">
           <Image
             src="/images/vergio-logo-full-desktop.png"
@@ -22,7 +22,7 @@ export function SiteHeader() {
           <Link href="/#portfolio">Portfolio</Link>
           <Link href="/#about">Nosotros</Link>
         </nav>
-        <Link className="button button-small" href="/#contact">
+        <Link className="button button-large" href="/#contact">
           Hablemos
         </Link>
       </div>
