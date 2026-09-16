@@ -7,7 +7,7 @@ export default function ContactSection() {
       <section id="about" className="special-gradient">
         <div className="p-30 max-w-360 justify-self-center w-full">
           <div className="eyebrow text-mint">¿TENÉS UN PROYECTO EN MENTE?</div>
-          <h2 className="font-bebas text-[80px]! desktop:text-[130px]! leading-[84%]! text-white">
+          <h2 className="font-bebas text-[80px]! desktop:text-[120px]! leading-[84%]! text-white">
             CREEMOS ALGO <br />
             <span className="text-mint">QUE VALGA LA PENA</span>
           </h2>

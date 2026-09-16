@@ -12,7 +12,7 @@ export function SiteHeader() {
             width={160}
             height={40}
             priority
-            className="h-10 w-auto md:h-12"
+            className="h-10 w-auto md:h-12 object-contain"
           />
         </Link>
         <nav className="nav" aria-label="Navegación principal">

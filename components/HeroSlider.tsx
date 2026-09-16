@@ -74,8 +74,8 @@ export default function Hero() {
 
   return (
     <main id="top">
-      <section className="section-shell px-0!">
-        <div className="hero max-w-360 justify-self-center relative">
+      <section className="section-shell p-0!">
+        <div className="hero max-w-360 h-[calc(100dvh-80px)] justify-self-center relative">
           <Swiper
             modules={[Autoplay]}
             fadeEffect={{ crossFade: true }}
@@ -92,16 +92,16 @@ export default function Hero() {
               setIsBeginning(swiper.isBeginning);
               setIsEnd(swiper.isEnd);
             }}
-            className="w-full"
+            className="w-full h-full"
           >
             {slides.map((slide, i) => (
-              <SwiperSlide key={i} className="px-29">
+              <SwiperSlide key={i} className="px-29 py-4 h-full content-center">
                 <div
                   className={`hero flex ${slide.style == "default" ? "flex-row" : "flex-row-reverse"} max-w-360 justify-self-center`}
                 >
                   <div className="hero-copy">
                     <p className={`eyebrow ${slide.style == "default" ? "text-purple" : "text-mint-400!"}`}>{slide.eyebrow}</p>
-                    <h1 className="uppercase font-bebas text-[80px] desktop:text-[130px] leading-[84%]">
+                    <h1 className="uppercase font-bebas text-[80px] desktop:text-[120px] leading-[84%]">
                       {slide.title}
                     </h1>
                     <p className="hero-text max-w-150 text-gray">{slide.text}</p>
@@ -135,7 +135,7 @@ export default function Hero() {
           </Swiper>
 
           {/* Pagination */}
-          <div className="absolute -bottom-10 left-1/2 -translate-x-1/2 flex gap-2 z-10">
+          <div className="absolute bottom-4 left-1/2 -translate-x-1/2 flex gap-2 z-10">
             {slides.map((_, i) => (
               <span
                 key={i}

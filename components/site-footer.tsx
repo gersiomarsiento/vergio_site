@@ -4,7 +4,7 @@ import InstagramIcon from "./icons/InstagramIcon";
 
 export function SiteFooter() {
   return (
-    <footer className="footer section-shell">
+    <footer className="footer mx-auto max-w-360 px-30">
         <Link className="brand" href="/#top" aria-label="Inicio">
           <Image
             src="/images/vergio-logo-full-desktop.png"

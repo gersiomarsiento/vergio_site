@@ -133,13 +133,13 @@ a {
 .section-shell {
   padding: 60px 120px;
   margin-inline: auto;
-  height: calc(100svh - 120px);
-  max-height: 858px;
+  /* height: calc(100dvh - 120px); */
+  /* max-height: 858px; */
 }
 
 .site-header {
   margin: 0 auto;
-  height: 120px;
+  height: 80px;
   display: grid;
   grid-template-columns: 1fr auto 1fr;
   align-items: center;
@@ -203,13 +203,13 @@ a {
   box-shadow: 0 10px 25px rgba(71, 0, 131, 0.15);
 }
 .button-small {
-  min-height: 40px;
+  height: 40px;
   font-weight: 400;
   padding: 10px 16px;
   font-size: 14px;
 }
 .button-large {
-  min-height: 48px;
+  height: 48px;
   font-weight: 600;
   padding: 14px 24px;
   font-size: 16px;
@@ -220,6 +220,7 @@ a {
 }
 .button-transparent {
   background: transparent;
+  height: 48px;
 }
 .text-link {
   display: inline-flex;
@@ -246,7 +247,7 @@ h1 span {
   color: var(--purple);
 }
 .hero-text {
-  margin: 28px 0 32px;
+  margin: 20px 0 28px;
   font-size: 21px;
   line-height: 34px;
   letter-spacing: -1%;

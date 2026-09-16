@@ -10,7 +10,7 @@ export default function PortfolioSection() {
           <div className="">
             <div>
               <p className="eyebrow text-white!">CLIENTES SATISFECHOS</p>
-              <h2 className="uppercase font-bebas text-[80px]! desktop:text-[130px]! leading-[84%]! text-white">
+              <h2 className="uppercase font-bebas text-[80px]! desktop:text-[120px]! leading-[84%]! text-white">
                 PROYECTOS REALES
                 <br />
                 <span className="text-mint-400">SOLUCIONES A MEDIDA</span>
