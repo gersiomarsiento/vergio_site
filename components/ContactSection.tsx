@@ -4,8 +4,8 @@ import Link from "next/link";
 export default function ContactSection() {
   return (
     <Reveal className="section-shell">
-      <section id="about" className="p-30 special-gradient">
-        <div className="">
+      <section id="about" className="special-gradient">
+        <div className="p-30 max-w-360 justify-self-center w-full">
           <div className="eyebrow text-mint">¿TENÉS UN PROYECTO EN MENTE?</div>
           <h2 className="font-bebas text-[80px]! desktop:text-[130px]! leading-[84%]! text-white">
             CREEMOS ALGO <br />

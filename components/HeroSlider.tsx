@@ -95,7 +95,7 @@ export default function Hero() {
             className="w-full"
           >
             {slides.map((slide, i) => (
-              <SwiperSlide key={i} className="px-30">
+              <SwiperSlide key={i} className="px-29">
                 <div
                   className={`hero flex ${slide.style == "default" ? "flex-row" : "flex-row-reverse"} max-w-360 justify-self-center`}
                 >

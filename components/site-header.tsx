@@ -14,10 +14,8 @@ export function SiteHeader() {
             priority
             className="h-10 w-auto md:h-12"
           />
-          {/* <span className="font-montserrat">VERGIO DIGITAL</span> */}
         </Link>
         <nav className="nav" aria-label="Navegación principal">
-          {/* <Link href="/#work">Trabajo</Link> */}
           <Link href="/#services">Servicios</Link>
           <Link href="/#portfolio">Portfolio</Link>
           <Link href="/#about">Nosotros</Link>

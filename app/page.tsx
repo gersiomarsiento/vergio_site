@@ -5,6 +5,7 @@ import { Ticker } from "@/components/ticker";
 import HeroSlider from "@/components/HeroSlider";
 import PortfolioSection from "@/components/PortfolioSection";
 import ContactSection from "@/components/ContactSection";
+import AboutSection from "@/components/AboutSection";
 
 
 
@@ -16,6 +17,7 @@ export default function Home() {
         <HeroSlider />
         <Ticker />
         <PortfolioSection />
+        <AboutSection />
         <ContactSection />
       </main>
       <SiteFooter />
