@@ -3,7 +3,7 @@ import { Reveal } from "@/components/reveal";
 export default function AboutSection() {
   return (
     <Reveal className="section-shell">
-      <section id="about" className="bg-linear-160 from-purple-100 to-mint-100">
+      <section id="about" className="theme-gradient-alt">
         <div className="max-w-360 justify-self-center p-30 flex flex-col gap-30">
           <div className="">
             <p className="eyebrow text-purple">SOBRE NOSOTROS</p>

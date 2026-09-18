@@ -6,6 +6,7 @@ import HeroSlider from "@/components/HeroSlider";
 import PortfolioSection from "@/components/PortfolioSection";
 import ContactSection from "@/components/ContactSection";
 import AboutSection from "@/components/AboutSection";
+import ServicesSection from "@/components/ServicesSection";
 
 
 
@@ -18,6 +19,7 @@ export default function Home() {
         <Ticker />
         <PortfolioSection />
         <AboutSection />
+        <ServicesSection />
         <ContactSection />
       </main>
       <SiteFooter />

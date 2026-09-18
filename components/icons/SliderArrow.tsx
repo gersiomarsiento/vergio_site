@@ -2,9 +2,10 @@
 
 interface IconProps {
   className?: string;
+  strokeWidth?: number;
 }
 
-export default function SliderArrow({ className }: IconProps) {
+export default function SliderArrow({ className, strokeWidth = 3}: IconProps) {
   return (
     <svg
       width="46"
@@ -14,7 +15,7 @@ export default function SliderArrow({ className }: IconProps) {
       xmlns="http://www.w3.org/2000/svg"
       className={className}
     >
-      <path d="M16 4L30 32L16 60" stroke="currentColor" strokeWidth="3" />
+      <path d="M16 4L30 32L16 60" stroke="currentColor" strokeWidth={strokeWidth} />
     </svg>
   );
 }

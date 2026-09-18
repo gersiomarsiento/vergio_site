@@ -3,7 +3,7 @@ import { Reveal } from "@/components/reveal";
 export default function ReviewsSection() {
   return (
     <Reveal className="section-shell">
-      <section id="about" className="split-section">
+      <section id="reviews" className="split-section">
         <div>
           <p className="eyebrow">QUÉ HACEMOS</p>
           <h2>Hacemos que lo digital se sienta menos complicado.</h2>
