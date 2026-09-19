@@ -216,7 +216,7 @@ export default function Cabanas() {
                       SITIO.
                     </div>
                   </div> */}
-                  <img src="/images/geo_hero.png" alt="geo-hero" className="project-visual visual-one object-cover min-h-50! aspect-[5/3]" />
+                  <img src="/images/geo_hero.webp" alt="geo-hero" className="project-visual visual-one object-cover min-h-50! aspect-[5/3]" />
                   <div className="project-meta">
                     <div>
                       <h3>Vía tu propio sitio</h3>

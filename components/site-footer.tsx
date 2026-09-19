@@ -12,7 +12,7 @@ export function SiteFooter() {
             width={160}
             height={40}
             priority
-            className="h-10 w-auto md:h-12"
+            className="h-10 w-auto md:h-12 object-contain"
           />
         </Link>
       <p>© 2026 VERGIO DIGITAL. Todos los derechos reservados.</p>

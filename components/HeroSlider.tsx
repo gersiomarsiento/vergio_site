@@ -36,7 +36,7 @@ const slides = [
       </>
     ),
     text: "Tras años de experiencia trabajando en turismo, desarrollamos un producto diseñado para ayudarte a hacer crecer tu negocio sin pagar comisiones.",
-    image: "/images/hero-image-2.png",
+    image: "/images/hero-image-2.webp",
     primaryCta: { label: "Conocé nuestro producto", href: "#work" },
     secondaryCta: { label: "Contactanos", href: "#about" },
     style: "alternate",
@@ -123,6 +123,7 @@ export default function Hero() {
                   <img
                     src={slide.image}
                     alt="hero image"
+                    fetchPriority="high"
                     className="w-1/2 max-w-150"
                     draggable={false}
                   />

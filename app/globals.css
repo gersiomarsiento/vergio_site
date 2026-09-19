@@ -191,6 +191,9 @@ a {
 .text-link {
   transition: opacity 0.2s ease;
 }
+button:hover {
+  cursor: pointer;
+}
 .nav a {
   padding: 16px;
 }
@@ -198,6 +201,9 @@ a {
 .footer-links a:hover,
 .text-link:hover {
   opacity: 0.6;
+}
+.footer-links a:hover {
+  color:var(--purple)
 }
 .site-header > .button {
   justify-self: end;
@@ -217,7 +223,7 @@ a {
     box-shadow 0.2s ease;
 }
 .button-large:hover {
-  transform: translateY(-2px);
+  transform: scale(1.01);
   box-shadow: 0 10px 25px rgba(71, 0, 131, 0.15);
 }
 .button-small {
@@ -236,9 +242,17 @@ a {
   background: var(--mint);
   color: var(--color-black);
 }
+.button-mint:hover {
+  transform: scale(1.01);
+  box-shadow: 0 10px 25px var(--color-mint-100);
+}
 .button-transparent {
   background: transparent;
   height: 48px;
+}
+.button-transparent:hover {
+  transform: scale(1.01);
+  box-shadow: 0 10px 25px var(--color-white);
 }
 .text-link {
   display: inline-flex;
@@ -458,7 +472,7 @@ h2 {
   transition: transform 0.35s ease;
 }
 .project .alt-image:hover {
-  transform: scale(1.03) translate3d(5, -5, 0);
+  transform: scale(1.03) translate3d(0, -5, 0);
 }
 .panel-purple {
   width: 46%;

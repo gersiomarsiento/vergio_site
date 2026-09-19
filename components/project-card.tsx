@@ -45,10 +45,15 @@ export function ProjectCard({
                   <div className="flex gap-2 mt-6">
                     {tags.map((tag) => (
                       <div
-                        className="px-2 py-1 rounded-lg border border-mint text-[12px]"
+                        className="relative cursor-default overflow-hidden px-2 py-1 rounded-lg border border-mint text-[12px] 
+                                  hover:text-white transition-colors duration-500
+                                  before:absolute before:inset-y-0 before:left-0 before:w-full
+                                  before:bg-mint before:origin-left before:scale-x-0
+                                  before:transition-transform before:duration-500
+                                  hover:before:scale-x-100"
                         key={tag}
                       >
-                        {tag}
+                        <span className="relative z-10">{tag}</span>
                       </div>
                     ))}
                   </div>

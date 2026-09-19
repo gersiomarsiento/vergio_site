@@ -34,7 +34,7 @@ export default function PortfolioSection() {
                 "Identidad de marca",
               ]}
               size="large"
-              src="/images/geo_hero.png"
+              src="/images/geo_hero.webp"
               alt_image_src="/images/mobile-mockup-geo.png"
               url="https://geocabanas.sergioezequielsarmiento.workers.dev/"
               url_label="Visitar sitio"
@@ -47,7 +47,7 @@ export default function PortfolioSection() {
               title="Wakana"
               meta="E-COMMERCE • CATÁLOGO • VENTAS"
               size="medium"
-              src="/images/wakana.png"
+              src="/images/wakana.webp"
               alt_image_src="/images/mobile-mockup-wakana.png"
               url="https://www.wakanaarte.com/"
             />
