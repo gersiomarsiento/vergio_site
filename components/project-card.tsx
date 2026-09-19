@@ -87,7 +87,7 @@ export function ProjectCard({
         </div>
       </div>
       <div className={`project-visual`}>
-        <img src={src} className="h-full object-cover" />
+        <img src={src} alt={title} className="h-full object-cover" />
       </div>
       {size != "large" && (
         <a
