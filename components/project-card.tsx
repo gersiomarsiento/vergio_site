@@ -92,6 +92,7 @@ export function ProjectCard({
       {size != "large" && (
         <a
           href={url}
+          aria-label={`Link to ${title}`}
           className="arrow rounded-full transition absolute top-6 right-6 hover:bg-mint-400 "
         >
           <ArrowRound className="text-mint-400 hover:text-white" />
@@ -100,6 +101,7 @@ export function ProjectCard({
       {alt_image_src && (
         <img
           src={alt_image_src}
+          alt={title}
           className={`alt-image absolute bottom-3 right-10 ${size == "large" ? "max-w-[15%]" : "max-w-[25%]"}`}
         />
       )}
