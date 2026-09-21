@@ -75,7 +75,7 @@ export default function Hero() {
   return (
     <main id="top">
       <section className="section-shell p-0!">
-        <div className="hero max-w-360 h-[calc(100dvh-80px)] justify-self-center relative">
+        <div className="hero max-w-360 mx-auto h-[calc(100dvh-80px)] justify-self-center relative">
           <Swiper
             modules={[Autoplay]}
             fadeEffect={{ crossFade: true }}

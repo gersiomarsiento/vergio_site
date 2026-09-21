@@ -4,7 +4,7 @@ export default function AboutSection() {
   return (
     <Reveal className="section-shell">
       <section id="about" className="theme-gradient-alt">
-        <div className="max-w-360 justify-self-center p-30 flex flex-col gap-30">
+        <div className="max-w-360 mx-auto justify-self-center p-30 flex flex-col gap-30">
           <div className="">
             <p className="eyebrow text-purple">SOBRE NOSOTROS</p>
             <h2 className="font-bebas text-[80px]! desktop:text-[120px]! leading-[84%]! text-black">

@@ -5,7 +5,7 @@ export default function ContactSection() {
   return (
     <Reveal className="section-shell">
       <section id="contact" className="special-gradient">
-        <div className="p-30 max-w-360 justify-self-center w-full">
+        <div className="p-30 max-w-360 mx-auto justify-self-center w-full">
           <div className="eyebrow text-mint">¿TENÉS UN PROYECTO EN MENTE?</div>
           <h2 className="font-bebas text-[80px]! desktop:text-[120px]! leading-[84%]! text-white">
             CREEMOS JUNTOS <br />
