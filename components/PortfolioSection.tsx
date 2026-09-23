@@ -1,16 +1,16 @@
 import Link from "next/link";
-import { ProjectCard } from "@/components/project-card";
+import { ProjectCard } from "@/components/ProjectCard";
 import { Reveal } from "@/components/reveal";
 
 export default function PortfolioSection() {
   return (
     <section id="work" className="bg-purple-900">
-      <div className="max-w-360 mx-auto p-30 justify-self-center ">
+      <div className="max-w-360 mx-auto p-3 lg:p-30 justify-self-center ">
         <Reveal>
           <div className="">
             <div>
               <p className="eyebrow text-white!">CLIENTES SATISFECHOS</p>
-              <h2 className="uppercase font-bebas text-[80px]! desktop:text-[120px]! leading-[84%]! text-white">
+              <h2 className="title-large text-white">
                 PROYECTOS REALES
                 <br />
                 <span className="text-mint-400">SOLUCIONES A MEDIDA</span>
@@ -22,7 +22,7 @@ export default function PortfolioSection() {
             </p>
           </div>
         </Reveal>
-        <div className="grid grid-cols-12 gap-6">
+        <div className="grid grid-cols-12 gap-3 lg:gap-6">
           <Reveal>
             <ProjectCard
               title="Geo Cabañas"

@@ -51,7 +51,7 @@ export default function Accordion() {
   };
 
   return (
-    <div className="accordion w-full max-w-[70%] ">
+    <div className="accordion w-full lg:max-w-[70%]">
       {SECTIONS.map((section, index) => {
         const isOpen = openIndex === index;
         return (
@@ -63,7 +63,7 @@ export default function Accordion() {
               className="flex w-full items-center justify-between py-3 text-left focus:outline-none focus-visible:ring-2 focus-visible:ring-emerald-500 rounded-md"
             >
               <span
-                className={`font-bebas text-[60px] leading-[100%] transition ${
+                className={`title-small leading-[100%] transition ${
                   isOpen ? "text-mint-400" : "text-black"
                 }`}
               >

@@ -14,17 +14,17 @@ export default function ServicesSection() {
             className="h-[52vw] w-full object-cover"
           />
         </div>
-        <div className="relative max-w-360 mx-auto justify-self-center p-30 flex flex-col gap-30">
+        <div className="relative max-w-360 mx-auto justify-self-center p-3 lg:p-30 flex flex-col gap-30">
           {/* Services Content */}
           <div className="">
             {/* Texts */}
             <p className="eyebrow text-purple">NUESTROS SERVICIOS</p>
-            <h2 className="font-bebas text-[80px]! desktop:text-[120px]! leading-[84%]! text-black">
+            <h2 className="title-large text-black">
               LO QUE <br />
               <span className="text-purple">SABEMOS HACER</span>
             </h2>
             <div className="flex gap-5 mt-12">
-              <div className="text-[21px] max-w-[70%] pb-12">
+              <div className="lg:text-[21px] lg:max-w-[70%] pb-12">
                 <p>
                   Diseñamos y desarrollamos productos digitales a medida,
                   específicos para las necesitades de cada cliente.
@@ -34,8 +34,8 @@ export default function ServicesSection() {
             {/* Accordion */}
             <Accordion />
             {/* Cards */}
-            <div className="flex gap-5 mt-12">
-              <div className="p-6 border [border-image:linear-gradient(to_right,#343036,#A7A1AA,#343036)_1] flex-1 flex flex-col gap-2.5 justify-center min-w-46 min-h-full">
+            <div className="flex flex-col lg:flex-row gap-5 mt-12">
+              <div className="about-card [border-image:linear-gradient(to_right,#343036,#A7A1AA,#343036)_1] ">
                 <strong className="font-bebas font-normal leading-none text-[32px] text-purple">
                   usabilidad y accesibilidad
                 </strong>
@@ -45,7 +45,7 @@ export default function ServicesSection() {
                   aliqua.{" "}
                 </p>
               </div>
-              <div className="p-6 border [border-image:linear-gradient(to_right,#343036,#A7A1AA,#343036)_1] flex-1 flex flex-col gap-2.5 justify-center min-w-46 min-h-full">
+              <div className="about-card [border-image:linear-gradient(to_right,#343036,#A7A1AA,#343036)_1] ">
                 <strong className="font-bebas font-normal leading-none text-[32px] text-mint-600">
                   optimización para motores de búsqueda
                 </strong>
@@ -55,7 +55,7 @@ export default function ServicesSection() {
                   aliqua.{" "}
                 </p>
               </div>
-              <div className="p-6 border [border-image:linear-gradient(to_right,#343036,#A7A1AA,#343036)_1] flex-1 flex flex-col gap-2.5 justify-center min-w-46 min-h-full">
+              <div className="about-card [border-image:linear-gradient(to_right,#343036,#A7A1AA,#343036)_1] ">
                 <strong className="font-bebas font-normal leading-none text-[32px] text-purple-900">
                   performance y velocidad
                 </strong>
@@ -65,7 +65,7 @@ export default function ServicesSection() {
                   aliqua.{" "}
                 </p>
               </div>
-              <div className="p-6 border [border-image:linear-gradient(to_right,#343036,#A7A1AA,#343036)_1] flex-1 flex flex-col gap-2.5 justify-center min-w-46 min-h-full">
+              <div className="about-card [border-image:linear-gradient(to_right,#343036,#A7A1AA,#343036)_1] ">
                 <strong className="font-bebas font-normal leading-none text-[32px] text-gray-800">
                   diseño adaptable a dispositivos
                 </strong>

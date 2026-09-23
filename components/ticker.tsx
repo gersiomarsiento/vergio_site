@@ -8,10 +8,23 @@ export function Ticker({ cabanas = false }: { cabanas?: boolean }) {
         "BOOKING + AIRBNB",
         "SIN CUOTA MENSUAL",
       ]
-    : ["ESTRATEGIA", "DISEÑO", "DESARROLLO", "PROYECTOS DIGITALES", "APLICACIONES", "WEB", "RESPONSIVE DESIGN", "CRECIMIENTO"];
+    : [
+        "ESTRATEGIA",
+        "DISEÑO",
+        "DESARROLLO",
+        "PROYECTOS DIGITALES",
+        "APLICACIONES",
+        "WEB",
+        "RESPONSIVE DESIGN",
+        "CRECIMIENTO",
+      ];
+
   return (
-    <div className="ticker" aria-label="Áreas de foco">
-      <div className="ticker-track">
+    <div
+      className="h-[62px] overflow-hidden border-y border-(--line) bg-(--mint) text-(--purple)"
+      aria-label="Áreas de foco"
+    >
+      <div className="flex w-max animate-ticker items-center gap-7 py-6 font-montserrat text-base/none font-bold tracking-[8%]">
         {[...items, ...items].map((item, i) => (
           <span key={`${item}-${i}`}>
             {item}

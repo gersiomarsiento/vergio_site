@@ -33,7 +33,7 @@ export function ProjectCard({
           <div>
             <p className="eyebrow mb-2! uppercase text-purple">{meta}</p>
             <h3
-              className={`font-bebas text-purple-900 ${size == "large" ? "text-[80px]" : "text-[60px] mb-2"} leading-none`}
+              className={`text-purple-900 ${size == "large" ? "title-medium" : "title-small mb-2"} leading-none`}
             >
               {title}
             </h3>
@@ -66,7 +66,7 @@ export function ProjectCard({
               <div className="mt-11 flex gap-3">
                 {button_url && (
                   <Link
-                    className="button max-h-10 button-small hover:shadow-none! transition! hover:bg-white! hover:text-purple! border hover:border-purple!"
+                    className="button max-h-10 button-small button-purple"
                     href={button_url}
                   >
                     {button_label}
@@ -75,7 +75,7 @@ export function ProjectCard({
 
                 {url && (
                   <Link
-                    className="button max-h-10 button-transparent text-mint! transition! border border-mint hover:shadow-none! hover:bg-mint! hover:text-white!"
+                    className="button max-h-10 button-small button-transparent-mint"
                     href={url}
                   >
                     {url_label}
