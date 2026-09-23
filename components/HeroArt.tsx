@@ -43,7 +43,7 @@ export function HeroArt({ cabanas = false }: { cabanas?: boolean }) {
         >
           <span className={cardLabel}>02</span>
           <strong className={`${cardTitle} hover:-translate-x-1`}>
-            {cabanas ? "Reserva" : "Crear"}
+            {cabanas ? "Reservas" : "Crear"}
           </strong>
         </div>
 

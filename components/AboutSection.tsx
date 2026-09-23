@@ -4,7 +4,7 @@ export default function AboutSection() {
   return (
     <Reveal className="section-shell">
       <section id="about" className="theme-gradient-alt">
-        <div className="max-w-360 mx-auto justify-self-center p-3 lg:p-30 flex flex-col gap-30">
+        <div className="max-w-xl lg:max-w-360 mx-auto justify-self-center px-3 py-6 lg:p-30 flex flex-col gap-15 lg:gap-30">
           <div className="">
             <p className="eyebrow text-purple">SOBRE NOSOTROS</p>
             <h2 className="title-large text-black">
@@ -53,7 +53,7 @@ export default function AboutSection() {
             <h4 className="title-small leading-none! text-black">
               Cómo llegamos al producto final
             </h4>
-            <div className="flex  flex-col lg:flex-row gap-5 mt-12">
+            <div className="flex  flex-col lg:flex-row gap-5 mt-5 lg:mt-12">
               <div
                 className={`[border-image:linear-gradient(to_right,#343036,#A7A1AA,#343036)_1] about-card`}
               >

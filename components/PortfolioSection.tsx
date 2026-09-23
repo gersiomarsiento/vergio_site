@@ -5,7 +5,7 @@ import { Reveal } from "@/components/reveal";
 export default function PortfolioSection() {
   return (
     <section id="work" className="bg-purple-900">
-      <div className="max-w-360 mx-auto p-3 lg:p-30 justify-self-center ">
+      <div className="max-w-xl lg:max-w-360 mx-auto px-3 py-6 lg:p-30 justify-self-center ">
         <Reveal>
           <div className="">
             <div>

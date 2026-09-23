@@ -4,10 +4,7 @@ import { SiteFooter } from "@/components/SiteFooter";
 import { HeroArt } from "@/components/HeroArt";
 import { Ticker } from "@/components/ticker";
 import { Reveal } from "@/components/reveal";
-
-const heading =
-  "font-bebas uppercase text-[clamp(2.75rem,5vw,4.625rem)] leading-[1.02]";
-const eyebrow = "mb-4.5 text-sm font-medium tracking-[8%] text-purple";
+import ArrowSmall from "@/components/icons/ArrowSmall";
 
 const comparisons = [
   {
@@ -44,7 +41,8 @@ const plans = [
       "Botón directo a WhatsApp",
     ],
     excluded: ["Motor de reservas", "SEO optimizado", "Panel de administrador"],
-    blurb: "Ideal para generar confianza en el cliente.",
+    blurb:
+      "Ideal para generar confianza en el cliente mediante la presencia online.",
   },
   {
     level: "02 · RECOMENDADO",
@@ -125,35 +123,56 @@ export default function Cabanas() {
       <SiteHeader />
       <main id="top">
         {/* HERO */}
-        <section className="mx-auto flex w-full max-w-360 flex-col-reverse items-center gap-16 px-3 py-4 lg:px-30 lg:py-24 lg:flex-row-reverse">
+        <section className="mx-auto min-h-[calc(100dvh-50px)] lg:min-h-[calc(100dvh-80px)] flex w-full max-w-xl lg:max-w-360 flex-col items-center gap-5 px-3 lg:px-30 lg:flex-row-reverse">
           <HeroArt cabanas />
           <Reveal className="w-full lg:w-1/2 flex flex-col">
             <p className="mb-4.5 text-sm font-medium tracking-[8%] text-mint-400">
               RESERVAS DIRECTAS · SIN COMISIÓN
             </p>
-            <h1 className="uppercase font-bebas text-[64px] leading-[92%]">
-              Cada reserva por Booking le deja el{" "}
-              <span className="text-purple">20%</span> a otro.
+            <h1 className="title-medium">
+              Cada reserva por Booking le deja el&nbsp;
+              <span className="relative inline-block">
+                <span className="text-purple">20%</span>
+                <span
+                  aria-hidden="true"
+                  className="absolute left-1/2 top-1/2 -translate-1/2 bg-purple text-white leading-none [clip-path:inset(0_100%_0_0)] animate-[wipe-reveal_0.7s_ease-out_3.5s_both]"
+                >
+                  20%
+                </span>
+              </span>
+              &nbsp;a otro.
             </h1>
-            <p className="mt-5 mb-2 text-[21px] leading-[34px] tracking-[-1%] text-gray">
+            <p className="my-5 hero-text lg:hidden block">
+              Con un sitio propio, esa plata se queda en tu bolsillo.
+            </p>
+            <p className="my-5 hero-text hidden lg:block">
               Con un sitio propio, esa plata se queda en tu bolsillo. Pagás una
               sola vez, no una cuota mensual — y seguís publicando en Booking y
               Airbnb si querés. Esto es una puerta más para tus huéspedes, no un
               reemplazo.
             </p>
-            <p className="mb-7 text-sm leading-relaxed text-gray">
+            {/* <p className="mb-7 text-sm leading-relaxed text-gray">
               Armado a medida para cabañas de Punta del Diablo — el mismo tipo
               de sitio, tu propio contenido.
-            </p>
-            <div className="flex flex-wrap items-center gap-6.5">
-              <Link className="button button-mint" href="#precios">
-                Ver opciones <span>↓</span>
+            </p> */}
+            <div className="hero-actions">
+              <Link
+                className="button button-large button-mint w-full sm:w-auto"
+                href="#pricing"
+              >
+                Ver opciones
+                <span>
+                  <ArrowSmall />
+                </span>
               </Link>
               <Link
-                className="button button-large button-transparent border border-gray text-black!"
+                className="button button-large button-transparent w-full sm:w-auto border border-gray"
                 href="#contact"
               >
-                Hablemos <span>↗</span>
+                Hablemos{" "}
+                <span>
+                  <ArrowSmall className="rotate-225" />
+                </span>
               </Link>
             </div>
           </Reveal>
@@ -163,44 +182,48 @@ export default function Cabanas() {
 
         {/* LA CUENTA QUE IMPORTA */}
         <Reveal>
-          <section className="mx-auto max-w-360 px-3 py-4 lg:px-30 lg:py-24">
-            <div className="grid gap-12 lg:grid-cols-2 lg:gap-21.5">
-              <div>
-                <p className={eyebrow}>LA CUENTA QUE IMPORTA</p>
-                <h2 className={heading}>
-                  Lo que se pierde por reserva, y lo que se paga una vez.
-                </h2>
-              </div>
-              <div>
-                <p className="mb-10 text-[21px] leading-[1.65] text-muted">
-                  Números ilustrativos para ver la lógica: tu tarifa y tu
-                  volumen de reservas son los que definen cuánto te ahorrás
-                  realmente.
-                </p>
-                <div className="grid grid-cols-3 gap-6">
-                  <div className="border-t border-line pt-4.5">
-                    <strong className="block font-bebas text-[34px] font-extrabold leading-none text-purple">
-                      20%
-                    </strong>
-                    <span className="mt-2 block text-[13px] text-muted">
-                      comisión de referencia
-                    </span>
-                  </div>
-                  <div className="border-t border-line pt-4.5">
-                    <strong className="block font-bebas text-[34px] font-extrabold leading-none text-purple">
-                      US$450
-                    </strong>
-                    <span className="mt-2 block text-[13px] text-muted">
-                      pago único ilustrativo
-                    </span>
-                  </div>
-                  <div className="border-t border-line pt-4.5">
-                    <strong className="block font-bebas text-[34px] font-extrabold leading-none text-purple">
-                      4-5
-                    </strong>
-                    <span className="mt-2 block text-[13px] text-muted">
-                      reservas para cubrirlo
-                    </span>
+          <section className="bg-purple-900">
+            <div className="max-w-xl lg:max-w-360 mx-auto px-3 py-6 lg:p-30 justify-self-center text-white">
+              <div className="grid lg:grid-cols-2 ">
+                <div>
+                  <p className="eyebrow">LA CUENTA QUE IMPORTA</p>
+                  <h2 className="title-medium">
+                    Un solo pago,
+                    <br />
+                    <span className="text-mint-400">ganancia mensual.</span>
+                  </h2>
+                </div>
+                <div>
+                  <p className="hero-text">
+                    La lógica es simple: si el cliente reserva directo desde tu
+                    web, te ahorrás el 20% de comisión que te cobran las
+                    plataformas.
+                  </p>
+                  <div className="grid grid-cols-3 gap-6">
+                    <div className="about-card min-w-auto gap-0 p-2 lg:p-4 justify-start [border-image:linear-gradient(to_right,var(--color-purple-600),var(--color-purple-400),var(--color-purple-600))_1]">
+                      <strong className="block font-bebas font-normal leading-none text-[32px] text-purple-100">
+                        20%
+                      </strong>
+                      <span className="text-[12px] leading-[150%]">
+                        de ahorro por reserva
+                      </span>
+                    </div>
+                    <div className="about-card min-w-auto gap-0 p-2 lg:p-4 justify-start [border-image:linear-gradient(to_right,var(--color-mint-600),var(--color-mint-400),var(--color-mint-600))_1]">
+                      <strong className="block font-bebas font-normal leading-none text-[32px] text-mint-100">
+                        US$450
+                      </strong>
+                      <span className="text-[12px] leading-[150%]">
+                        pagás una sola vez
+                      </span>
+                    </div>
+                    <div className="about-card min-w-auto gap-0 p-2 lg:p-4 justify-start [border-image:linear-gradient(to_right,var(--color-gray-600),var(--color-gray-400),var(--color-gray-600))_1]">
+                      <strong className="block font-bebas font-normal leading-none text-[32px] text-gray-100">
+                        {">"}1 mes
+                      </strong>
+                      <span className="text-[12px] leading-[150%]">
+                        para recuperarlo
+                      </span>
+                    </div>
                   </div>
                 </div>
               </div>
@@ -209,20 +232,21 @@ export default function Cabanas() {
         </Reveal>
 
         {/* LA LÓGICA */}
-        <section className="border-t border-line px-3 lg:px-30 pt-27.5 pb-31.25">
-          <div className="mx-auto max-w-360">
+        <section className="theme-gradient-alt text-white">
+          <div className="max-w-xl lg:max-w-360 mx-auto justify-self-center px-3 py-6 lg:p-30 flex flex-col">
             <Reveal>
-              <div className="mb-16 lg:max-w-[70%]">
-                <p className={eyebrow}>LA LÓGICA</p>
-                <h2 className={heading}>
-                  Una reserva que deja de pagar comisión cambia la cuenta.
+              <div className="mb-5 lg:mb-12 lg:max-w-[70%]">
+                <p className="eyebrow text-purple">LA LÓGICA</p>
+                <h2 className="title-medium text-black">
+                  Una reserva sin comisión <br />
+                  <span className="text-purple">cambia la cuenta.</span>
                 </h2>
               </div>
             </Reveal>
             <div className="grid gap-x-7 gap-y-12 lg:grid-cols-2">
               {comparisons.map((c) => (
                 <Reveal key={c.title}>
-                  <article className="rounded-lg bg-mint-100 px-6 py-10">
+                  <article className="project bg-purple-900">
                     <img
                       src={c.img}
                       alt={c.title}
@@ -231,9 +255,9 @@ export default function Cabanas() {
                     <div className="mt-6 flex flex-col gap-4 sm:flex-row sm:items-center sm:justify-between">
                       <div>
                         <h3 className="text-xl font-semibold">{c.title}</h3>
-                        <p className="mt-2 text-muted">{c.text}</p>
+                        <p className="mt-2">{c.text}</p>
                       </div>
-                      <span className="shrink-0 text-[25px] font-bold text-purple">
+                      <span className="shrink-0 text-[25px] font-bold text-mint-200">
                         {c.stat}
                       </span>
                     </div>
@@ -245,12 +269,12 @@ export default function Cabanas() {
         </section>
 
         {/* POR QUÉ PAGO ÚNICO */}
-        <Reveal>
-          <section className="mx-auto max-w-360 px-3 py-4 lg:px-30 lg:py-24">
+        {/* <Reveal>
+          <section className="mx-auto max-w-xl lg:max-w-360 px-3 py-4 lg:px-30 lg:py-24">
             <div className="grid gap-8 lg:grid-cols-2 lg:gap-21.5">
               <div>
-                <p className={eyebrow}>POR QUÉ PAGO ÚNICO</p>
-                <h2 className={heading}>Evitás otra suscripción más.</h2>
+                <p className="eyebrow">POR QUÉ PAGO ÚNICO</p>
+                <h2 className="title-medium">Evitás otra suscripción más.</h2>
               </div>
               <div className="space-y-6 text-[21px] leading-[1.65] text-muted">
                 <p>
@@ -259,7 +283,7 @@ export default function Cabanas() {
                   tener un sitio propio.
                 </p>
                 <p>
-                  <strong className="text-black">La idea es simple:</strong>{" "}
+                  <strong className="text-black">La idea es simple:</strong>
                   pagás una vez, el sitio queda en tus manos, y de ahí en más lo
                   que entra por reserva directa es todo tuyo. Si más adelante
                   querés que nos encarguemos del mantenimiento, eso es un
@@ -273,38 +297,36 @@ export default function Cabanas() {
               </div>
             </div>
           </section>
-        </Reveal>
+        </Reveal> */}
 
         {/* OPCIONES */}
-        <section
-          id="precios"
-          className="border-t border-line px-3 lg:px-30 pt-27.5 pb-31.25"
-        >
-          <div className="mx-auto max-w-360">
+        <section id="pricing" className="theme-gradient">
+          <div className="max-w-xl lg:max-w-360 mx-auto justify-self-center px-3 py-6 lg:p-30 flex flex-col">
             <Reveal>
               <div className="lg:max-w-[70%]">
-                <p className={eyebrow}>OPCIONES</p>
-                <h2 className={heading}>
-                  Tres niveles, según cuánto necesite tu cabaña.
+                <p className="eyebrow text-purple">NUESTRAS OPCIONES</p>
+                <h2 className="title-medium">
+                  Tres niveles, según <br />
+                  <span className="text-purple">tu necesidad.</span>
                 </h2>
-                <p className="mt-5 text-[18px] leading-[1.65] text-gray">
+                <p className="hero-text">
                   Elegí el que resuelve tu problema hoy. Se puede empezar simple
                   y sumar más adelante.
                 </p>
               </div>
             </Reveal>
-            <div className="mt-12 grid gap-6 sm:grid-cols-1 lg:grid-cols-3">
+            <div className="grid gap-6 grid-cols-1 lg:grid-cols-3">
               {plans.map((p) => (
                 <Reveal key={p.name}>
                   <article
-                    className={`flex h-full flex-col rounded-3xl border p-7 ${
+                    className={`project border py-4 ${
                       p.featured
-                        ? "-translate-y-2.5 border-purple bg-purple text-white"
-                        : "border-line bg-white text-ink"
+                        ? "border-purple bg-purple text-white"
+                        : "border-line bg-mint-50 text-ink"
                     }`}
                   >
                     <div
-                      className={`mb-2.5 text-xs font-extrabold uppercase tracking-[.12em] ${p.featured ? "text-mint" : "text-muted"}`}
+                      className={`eyebrow mb-2 font-semibold ${p.featured ? "text-mint" : "text-ink"}`}
                     >
                       {p.level}
                     </div>
@@ -321,19 +343,19 @@ export default function Cabanas() {
                           className={`flex gap-2.5 leading-snug ${p.featured ? "text-white/80" : "text-muted"}`}
                         >
                           <span
-                            className={`font-extrabold ${p.featured ? "text-mint" : "text-purple"}`}
+                            className={`font-extrabold ${p.featured ? "text-mint" : "text-mint-400"}`}
                           >
                             ✓
-                          </span>{" "}
+                          </span>
                           {f}
                         </li>
                       ))}
                       {p.excluded.map((f) => (
                         <li
                           key={f}
-                          className="flex gap-2.5 leading-snug text-muted opacity-55"
+                          className="flex gap-2.5 leading-snug text-red opacity-55"
                         >
-                          <span>–</span> {f}
+                          <span className="text-[red]">✘</span> {f}
                         </li>
                       ))}
                     </ul>
@@ -351,7 +373,7 @@ export default function Cabanas() {
                         {p.price}
                       </strong>
                       <span
-                        className={`max-w-[110px] text-right text-xs font-bold uppercase tracking-[.04em] ${p.featured ? "text-white/70" : "text-muted"}`}
+                        className={`max-w-[110px] text-right text-xs self-center font-bold uppercase tracking-[.04em] ${p.featured ? "text-purple-50" : "text-purple-900"}`}
                       >
                         {p.unit}
                       </span>
@@ -365,38 +387,34 @@ export default function Cabanas() {
 
         {/* DESPUÉS DEL LANZAMIENTO */}
         <Reveal>
-          <section className="mx-auto flex max-w-360 flex-col gap-10 px-3 py-4 lg:px-30 lg:py-24">
-            <div className="lg:max-w-[70%]">
-              <p className={eyebrow}>DESPUÉS DEL LANZAMIENTO</p>
-              <h2 className={heading}>
-                ¿Quién se encarga del sitio de ahí en más?
-              </h2>
-            </div>
-            <div>
-              <p className="text-[21px] leading-[1.65] text-muted">
-                Se combina con cualquiera de los tres niveles de arriba — vos
-                elegís cuánto querés delegar.
-              </p>
-              <div className="mt-10 grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
-                {support.map((s) => (
-                  <article
-                    key={s.title}
-                    className="rounded-[20px] border border-line bg-white p-6"
-                  >
-                    <div className="text-[11px] font-extrabold uppercase tracking-[.12em] text-purple">
-                      Opción
-                    </div>
-                    <h3 className="my-2.5 text-[19px] tracking-[-.02em]">
-                      {s.title}
-                    </h3>
-                    <div className="mb-2.5 font-display text-2xl font-extrabold text-purple">
-                      {s.price}
-                    </div>
-                    <p className="m-0 text-sm leading-snug text-muted">
-                      {s.desc}
-                    </p>
-                  </article>
-                ))}
+          <section className="bg-mint">
+            <div className="mx-auto flex max-w-xl lg:max-w-360 flex-col px-3 py-6 lg:px-30 lg:py-24">
+              <div className="lg:max-w-[70%]">
+                <p className="eyebrow">DESPUÉS DEL LANZAMIENTO</p>
+                <h2 className="title-medium">
+                  ¿Quién se encarga del sitio de ahí en más?
+                </h2>
+              </div>
+              <div>
+                <p className="hero-text">
+                  Se combina con cualquiera de los tres niveles de arriba. Vos
+                  elegís cuánto querés delegar.
+                </p>
+                <div className="mt-5 lg:mt-12 grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
+                  {support.map((s, i) => (
+                    <article key={s.title} className="project p-4">
+                      <h3 className="my-2.5 title-small lg:text-[30px] xl:text-[40px]">
+                        {s.title}
+                      </h3>
+                      <div className="mb-2.5 font-display text-2xl font-extrabold text-purple">
+                        {s.price}
+                      </div>
+                      <p className="m-0 text-sm leading-snug text-muted">
+                        {s.desc}
+                      </p>
+                    </article>
+                  ))}
+                </div>
               </div>
             </div>
           </section>
@@ -405,7 +423,7 @@ export default function Cabanas() {
         {/* CONTACTO */}
         <Reveal className="section-shell">
           <section id="contact" className="special-gradient">
-            <div className="p-3 lg:p-30 max-w-360 mx-auto justify-self-center w-full">
+            <div className="px-3 py-6 lg:p-30 max-w-xl lg:max-w-360 mx-auto justify-self-center w-full">
               <div className="eyebrow text-mint">HABLEMOS</div>
               <h2 className="title-large text-white">
                 ¿Qué opción tiene sentido <br />
@@ -420,10 +438,13 @@ export default function Cabanas() {
                 sitio.
               </p>
               <Link
-                className={`button button-large button-mint mt-10`}
+                className={`button button-large button-mint`}
                 href="https://wa.me/+59898899654?text=¡Hola! Me interesa saber más sobre el servicio de sitios web para cabañas."
               >
-                Escribinos por WhatsApp <span>→</span>
+                Escribinos por WhatsApp{" "}
+                <span>
+                  <ArrowSmall className="rotate-270" />
+                </span>
               </Link>
             </div>
           </section>

@@ -14,7 +14,7 @@ export default function ServicesSection() {
             className="h-[52vw] w-full object-cover"
           />
         </div>
-        <div className="relative max-w-360 mx-auto justify-self-center p-3 lg:p-30 flex flex-col gap-30">
+        <div className="relative max-w-xl lg:max-w-360 mx-auto justify-self-center px-3 py-6 lg:p-30 flex flex-col gap-30">
           {/* Services Content */}
           <div className="">
             {/* Texts */}

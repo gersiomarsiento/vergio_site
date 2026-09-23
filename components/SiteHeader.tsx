@@ -6,7 +6,7 @@ import { useEffect, useState } from "react";
 
 const navLinks = [
   { href: "/#services", label: "Servicios" },
-  { href: "/#portfolio", label: "Portfolio" },
+  { href: "/#work", label: "Portfolio" },
   { href: "/#about", label: "Nosotros" },
 ];
 
@@ -40,7 +40,7 @@ export function SiteHeader() {
 
   return (
     <header className="relative z-50">
-      <div className="mx-auto h-20 flex items-center justify-between lg:grid lg:grid-cols-[1fr_auto_1fr] gap-7 max-w-360 px-4 lg:px-30">
+      <div className="mx-auto h-12.5 lg:h-20 flex items-center justify-between lg:grid lg:grid-cols-[1fr_auto_1fr] gap-7 max-w-xl lg:max-w-360 px-3 lg:px-30">
         <Link className="brand" href="/#top" aria-label="Inicio">
           <Image
             src="/images/vergio-logo-full-desktop.png"
@@ -48,7 +48,15 @@ export function SiteHeader() {
             width={160}
             height={40}
             priority
-            className="h-10 w-auto md:h-12 min-w-20 object-contain"
+            className="h-10 w-auto md:h-12 min-w-20 object-contain hidden lg:block"
+          />
+          <Image
+            src="/images/vergio-logo-simple.png"
+            alt="Vergio"
+            width={40}
+            height={40}
+            priority
+            className="h-5 w-auto md:h-8 object-contain lg:hidden block"
           />
         </Link>
 
@@ -74,7 +82,6 @@ export function SiteHeader() {
         >
           Hablemos
         </Link>
-
         {/* Botón hamburguesa (mobile / tablet) */}
         <button
           type="button"

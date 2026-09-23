@@ -21,10 +21,10 @@ export function Ticker({ cabanas = false }: { cabanas?: boolean }) {
 
   return (
     <div
-      className="h-[62px] overflow-hidden border-y border-(--line) bg-(--mint) text-(--purple)"
+      className=" overflow-hidden border-y border-(--line) bg-(--mint) text-(--purple)"
       aria-label="Áreas de foco"
     >
-      <div className="flex w-max animate-ticker items-center gap-7 py-6 font-montserrat text-base/none font-bold tracking-[8%]">
+      <div className="flex w-max animate-ticker items-center gap-7 py-3 lg:py-[23px] font-montserrat text-base/none font-bold tracking-[8%]">
         {[...items, ...items].map((item, i) => (
           <span key={`${item}-${i}`}>
             {item}

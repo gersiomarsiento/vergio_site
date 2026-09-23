@@ -167,7 +167,7 @@ a {
     @apply bg-transparent;
   }
   .button-transparent-mint {
-    @apply bg-transparent text-mint border border-mint;
+    @apply bg-transparent text-mint-400 border border-mint-400;
   }
 
   /* SECTIONS AND BGS */
@@ -297,6 +297,15 @@ a {
     transform: translateY(0);
   }
 
+  @keyframes wipe-reveal {
+    from {
+      clip-path: inset(0 100% 0 0);
+    }
+    to {
+      clip-path: inset(0 0% 0 0);
+    }
+  }
+  
   .special-gradient {
     background:
       radial-gradient(circle at -10% -10%, #286243, transparent 42%),
